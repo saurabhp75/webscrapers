@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import time  # for sleep
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
@@ -55,5 +56,5 @@ weather["mxTemp"] = mxNums.astype('int')
 weather["mnTemp"] = mnNums.astype('int')
 print(weather)
 
-# browser.wait(5)
-# browser.close()
+time.sleep(10)  # sleep 10 seconds
+browser.quit()
