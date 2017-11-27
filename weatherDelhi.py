@@ -54,7 +54,8 @@ mnNums = weather["MinTemp"].str.extract("(?P<mnTemp>\d+)", expand=False)
 # print(mxNums)
 weather["mxTemp"] = mxNums.astype('int')
 weather["mnTemp"] = mnNums.astype('int')
-print(weather)
+
+print(weather[['Date', 'Desc', 'mxTemp', 'mnTemp']])
 
 time.sleep(10)  # sleep 10 seconds
 browser.quit()
